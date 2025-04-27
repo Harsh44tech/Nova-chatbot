@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Navbar */
+nav {
+  padding: 12px 16px;
+  min-height: 56px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+nav .left {
+  font-weight: 700;
+  font-size: 24px;
+  color: #222;
+}
+
+nav .right {
+  font-weight: 600;
+  font-size: 16px;
+  background-color: #1d1d1d;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  width: 70px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Main chat area */
+.main {
+  overflow-y: auto;
+  padding-bottom: 80px;
+  padding: 0 16px;
+}
+
+/* Bot messages */
+.main .bot_contain {
+  float: left;
+}
+.bot {
+  background-color: #f9f9f9;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #222;
+  width: 80%;
+  margin: 12px 10px;
+  overflow-x: auto;
+  margin-bottom: 120px;
+}
+
+.bot h1, .bot h2, .bot h3 {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #333;
+}
+
+.bot ul {
+  margin-left: 20px;
+}
+
+.bot li {
+  margin-bottom: 6px;
+}
+
+.bot code {
+  background-color: #eee;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+/* Loading dots */
+.load_box {
+  display: flex;
+  align-items: center;
+}
+
+.main .bot .load {
+  height: 10px;
+  width: 10px;
+  background-color: #95f6cee0;
+  margin: 5px;
+  border-radius: 50%;
+}
+
+.main .bot .load_box .load:nth-child(1) {
+  animation: load 1s infinite ease-in-out;
+  animation-delay: 0.5s;
+}
+
+.main .bot .load_box .load:nth-child(2) {
+  animation: load 1s infinite ease-in-out;
+  animation-delay: 0.8s;
+}
+
+.main .bot .load_box .load:nth-child(3) {
+  animation: load 1s infinite ease-in-out;
+  animation-delay: 1s;
+}
+
+/* User messages */
+.main .user {
+  width: fit-content;
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: 0;
+  background-color: #d0f0e0;
+  padding: 10px 14px;
+  margin-top: 12px;
+  border-radius: 12px;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  word-wrap: break-word;
+}
+
+/* Input box */
+.bottom {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: #ffffff;
+  border-top: 1px solid #ccc;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom input {
+  height: 40px;
+  width: 100%;
+  max-width: 75%;
+  font-size: 16px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.bottom input:focus {
+  border-color: #6f897f;
+}
+
+/* Send button */
+.bottom .btn {
+  height: 40px;
+  width: 80px;
+  margin-left: 10px;
+  background-color: #6f897f;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.bottom .btn:hover {
+  background-color: #567268;
+}
+
+/* Ensuring Full-width Input Box *//* Ensuring Full-width Input Box */
+.bottom .input-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.bottom .input-container textarea {
+  width: 80%;  /* Make the textarea wide */
+  min-height: 40px; /* Minimum height */
+  max-height: 150px; /* Maximum height to avoid it growing too much */
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1.5px solid #ccc;
+  outline: none;
+  resize: none;  /* Disable manual resizing */
+  overflow-y: auto; /* show vertical scrollbar */
+  word-wrap: break-word; /* Allow wrapping of long words */
+}
+
+.bottom .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  background-color: #6f897fe0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.bottom .btn:hover {
+  background-color: #4a5f75;
+}
+
+#image-btn {
+  background-color: #f0ad4e; /* Image Upload Button Color */
+}
+
+.bottom .send-btn {
+  background-color: #8f9397; /* Blue Send Button */
+  margin-left: 10px;
+}
+
+.bottom img{
+  height: 20px;
+  width: 20px;
+}
+
+/* Optional: Adding padding and margin adjustments for better look */
+.bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+@keyframes load {
+  0% {
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(0.4);
+  }
+}

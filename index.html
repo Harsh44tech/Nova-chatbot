@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab - ChatBot</title>
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="left">
+      NOVA
+    </div>
+    <div class="right">
+      login
+    </div>
+  </nav>
+
+  <hr>
+
+  <!-- Main Chat Area -->
+  <main id="main" class="main"></main>
+
+  <!-- Bottom Input Section -->
+  <div class="bottom">
+    <!-- Full-width Input with Send and Image Upload -->
+    <div class="input-container">
+      <!-- Use textarea for dynamic resizing -->
+      <textarea id="input" placeholder="Ask anything!" rows="1"></textarea>
+      
+      <!-- Image Upload Button -->
+      <label for="image-upload" id="image-btn" class="btn">
+        <img src="img.png" alt="" />
+      </label>
+
+      <!-- Send Button with Arrow -->
+      <div id="btn" class="btn send-btn">
+        <img src="arrow.png">
+      </div>
+      
+      <!-- Hidden File Input for Image Upload -->
+      <input type="file" id="image-upload" class="image-upload" accept="image/*" style="display:none;" />
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="index.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
